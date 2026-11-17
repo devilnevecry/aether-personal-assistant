@@ -4,14 +4,13 @@ from __future__ import annotations
 
 from datetime import datetime
 
-from aiogram import Router, F
+from aiogram import F, Router
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import CallbackQuery, Message
 
 from database import Database
-from keyboards.inline import category_keyboard, finance_menu_keyboard
-
+from keyboards.inline import category_keyboard
 
 router = Router()
 

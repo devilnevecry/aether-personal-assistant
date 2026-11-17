@@ -3,18 +3,16 @@
 from __future__ import annotations
 
 from collections import defaultdict
+from datetime import datetime
 from typing import Any
 
-from datetime import datetime
-
-from aiogram import Router, F
+from aiogram import F, Router
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import CallbackQuery, Message
 
 from database import Database
-from keyboards.inline import task_actions_keyboard, tasks_group_keyboard, tasks_menu_keyboard
-
+from keyboards.inline import tasks_group_keyboard
 
 router = Router()
 

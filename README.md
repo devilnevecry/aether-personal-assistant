@@ -173,3 +173,39 @@ This project demonstrates:
 ## 📄 License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+## Deployment
+
+Run with Docker:
+
+```bash
+docker build -t aether-personal-assistant .
+docker run --env-file .env aether-personal-assistant
+```
+
+Or directly:
+
+```bash
+python -m pip install -r requirements.txt
+python main.py
+```
+
+## Database backup and restore
+
+The SQLite database is stored at `DB_PATH` (default `assistant.db`).
+
+Backup:
+
+```bash
+cp assistant.db assistant.db.backup
+```
+
+Restore:
+
+```bash
+cp assistant.db.backup assistant.db
+```
+
+Keep `.env` and database backups outside version control.

@@ -5,15 +5,13 @@ from __future__ import annotations
 from collections import defaultdict
 from typing import Any
 
-from aiogram import Router, F
+from aiogram import F, Router
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import CallbackQuery, Message
 
 from database import Database
-from keyboards.inline import note_actions_keyboard, notes_group_keyboard, notes_menu_keyboard
-
-
+from keyboards.inline import notes_group_keyboard
 
 router = Router()
 
